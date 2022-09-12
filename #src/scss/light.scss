@@ -1,0 +1,57 @@
+/*Colors*/
+$white: #EFEFEF;
+$dark: #1D1D1E;
+
+body{
+    background-color: $white;
+    color: black;
+}
+  
+*::-webkit-scrollbar-thumb {
+    background-color: rgba($dark, 0.1);
+}
+  
+.menu-icon{
+    span{
+        background-color: black;
+    }
+}
+.btn {
+    border: 2px solid black;
+}
+.header {
+    &__top{
+        background-color: rgba(white, .5);
+        box-shadow: 0 0 5px rgba(black, .4);    
+    }
+}
+.nav__btn-theme{
+    background-color: $dark;
+}
+.mobile-header {
+    background-color: rgba(white, 1);
+    
+}
+.content-home {
+    &__socials {
+        a{
+            span {
+                &::before{
+                    background-color: rgba(black, .6);
+                }
+                &::after{
+                    background-color: black;
+                    
+                }
+                
+            }
+            
+        }
+    }
+}
+.footer {
+    background-color: $dark;
+    color: $white;
+}
+
+

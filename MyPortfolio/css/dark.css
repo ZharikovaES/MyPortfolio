@@ -1,0 +1,48 @@
+/*Colors*/
+
+body {
+  background-color: #1D1D1E;
+  color: #EFEFEF;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(239, 239, 239, 0.1);
+}
+
+.menu-icon span {
+  background-color: #EFEFEF;
+}
+
+.btn {
+  border: 2px solid #EFEFEF;
+}
+
+.header__top {
+  background-color: rgba(29, 29, 30, 0.5);
+  -webkit-box-shadow: 0 0 5px rgba(239, 239, 239, 0.4);
+          box-shadow: 0 0 5px rgba(239, 239, 239, 0.4);
+}
+
+.nav__btn-theme {
+  background-color: #EFEFEF;
+}
+
+.mobile-header {
+  background-color: #1d1d1e;
+}
+
+.content-home__socials a span::before {
+  background-color: rgba(239, 239, 239, 0.6);
+}
+
+.content-home__socials a span::after {
+  background-color: #EFEFEF;
+}
+
+.footer {
+  background-color: #EFEFEF;
+  color: #1D1D1E;
+}
+@supports (-webkit-appearance:none){
+
+}

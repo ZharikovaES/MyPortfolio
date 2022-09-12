@@ -1,0 +1,48 @@
+/*Colors*/
+
+body {
+  background-color: #EFEFEF;
+  color: black;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(29, 29, 30, 0.1);
+}
+
+.menu-icon span {
+  background-color: black;
+}
+
+.btn {
+  border: 2px solid black;
+}
+
+.header__top {
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+.nav__btn-theme {
+  background-color: #1D1D1E;
+}
+
+.mobile-header {
+  background-color: white;
+}
+
+.content-home__socials a span::before {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.content-home__socials a span::after {
+  background-color: black;
+}
+
+.footer {
+  background-color: #1D1D1E;
+  color: #EFEFEF;
+}
+@supports (-webkit-appearance:none){
+
+}

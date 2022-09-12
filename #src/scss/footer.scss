@@ -1,0 +1,22 @@
+.footer {
+    padding: 6vh 0;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media screen and (max-width: 700px) {
+            flex-wrap: wrap-reverse;
+            justify-content: center;
+            row-gap: 3vh;
+        }
+    }
+    &__text {
+        font-weight: 300;
+    }
+    &__socials {
+        @media screen and (max-width: 700px) {
+            justify-content: center;
+            flex: 0 1 100%;
+        }
+    }
+}
