@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#c7cbcc">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#273a43">
+    <script>
+        // проверка: поддерживает ли браузер цветовые схемы
+        if (matchMedia('(prefers-color-scheme: dark)').media === "not all") {
+            document.documentElement.style.display = "none";
+            document.head.insertAdjacentHTML('beforeend', 
+            '<link rel="stylesheet" href="css/light.min.css" onload="document.documentElement.style.display=\'\'">')
+        }
+    </script>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/light.min.css" media="(prefers-color-scheme: light)">
+    <link rel="stylesheet" href="css/dark.min.css" media="(prefers-color-scheme: dark)">
+    <title>Главная</title>
+</head>
+
+<body>
+    @@include('_header.html')
+    <main>
+        @@include('_home.html')
+        @@include('_projects.html')
+        @@include('_about.html')
+    </main>
+    @@include('_footer.html')
+    <script src="js/all.min.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>
