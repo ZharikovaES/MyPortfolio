@@ -32,6 +32,14 @@ body{
     background-color: rgba($dark, 1);
     
 }
+.home {
+    &__img-wrapper{
+        background: -moz-linear-gradient(180deg, rgba(0,0,0,0) 84%, $dark 98%);
+        background: -webkit-linear-gradient(180deg, rgba(0,0,0,0) 84%, $dark 98%);
+        background: linear-gradient(180deg, rgba(0,0,0,0) 84%, $dark 98%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr=$dark,GradientType=1);
+    }
+}
 .content-home {
     &__socials {
         a{

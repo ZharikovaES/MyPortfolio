@@ -12,6 +12,10 @@
     }
     &__text {
         font-weight: 300;
+        @include adaptiv-font(22, 20, 1);
+        a{
+            font-weight: 500;
+        }
     }
     &__socials {
         @media screen and (max-width: 700px) {
