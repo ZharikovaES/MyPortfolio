@@ -32,10 +32,12 @@ if (menuBtnTopHeader && menuMobileHeader && closeBtnMobileHeader) {
     menuBtnTopHeader.addEventListener('click', () => {
         menuBtnTopHeader.style.pointerEvents = "none";
         menuMobileHeader.style.left = 0;
+        document.body.style.overflow = "hidden";
         closeBtnMobileHeader.style.pointerEvents = null;
     });
     closeBtnMobileHeader.addEventListener('click', () => {
         closeBtnMobileHeader.style.pointerEvents = "none";
+        document.body.style.overflow = null;
         menuMobileHeader.style.left = null;
         menuBtnTopHeader.style.pointerEvents = null;
     });

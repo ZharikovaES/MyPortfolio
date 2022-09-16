@@ -31,6 +31,13 @@ body {
   background-color: #1d1d1e;
 }
 
+.home__img-wrapper {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(84%, rgba(0, 0, 0, 0)), color-stop(98%, #1D1D1E));
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 84%, #1D1D1E 98%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 84%, #1D1D1E 98%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr=$dark,GradientType=1);
+}
+
 .content-home__socials a span::before {
   background-color: rgba(239, 239, 239, 0.6);
 }
