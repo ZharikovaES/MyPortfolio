@@ -1,8 +1,8 @@
-//dynamic adaptive
+// dynamic adaptive
 
 new DynamicAdapt("max").init();
 
-//header menu on mobiles
+// header menu on mobiles
 
 const widthFromMobile = 480;
 
@@ -10,7 +10,7 @@ const menuBtnTopHeader = document.querySelector('.top-header .menu-icon');
 const menuMobileHeader = document.querySelector('.mobile-header');
 const closeBtnMobileHeader = document.querySelector('.mobile-header .menu-icon');
 
-//setting of scheme
+// setting of scheme
 
 const changeThemeBtn = document.querySelector('.nav__btn-theme');
 const lightStyles = document.querySelectorAll('link[rel=stylesheet][media*=prefers-color-scheme][media*=light]');
@@ -27,6 +27,14 @@ if (changeThemeBtn && lightStyles?.length && darkStyles?.length && darkSchemeMed
     setupScheme();
 }
 
+// header menu on mobiles
+
+function closeMenuMobile() {
+    closeBtnMobileHeader.style.pointerEvents = "none";
+    document.body.style.overflow = null;
+    menuMobileHeader.style.left = null;
+    menuBtnTopHeader.style.pointerEvents = null;
+}
 
 if (menuBtnTopHeader && menuMobileHeader && closeBtnMobileHeader) {
     menuBtnTopHeader.addEventListener('click', () => {
@@ -35,12 +43,7 @@ if (menuBtnTopHeader && menuMobileHeader && closeBtnMobileHeader) {
         document.body.style.overflow = "hidden";
         closeBtnMobileHeader.style.pointerEvents = null;
     });
-    closeBtnMobileHeader.addEventListener('click', () => {
-        closeBtnMobileHeader.style.pointerEvents = "none";
-        document.body.style.overflow = null;
-        menuMobileHeader.style.left = null;
-        menuBtnTopHeader.style.pointerEvents = null;
-    });
+    closeBtnMobileHeader.addEventListener('click', closeMenuMobile);
 }
 
 window.addEventListener('resize', () => {
@@ -117,3 +120,21 @@ function setupScheme() {
     }
 }
 
+// scrolling by anchors
+
+const anchors = document.querySelectorAll('a[href*="#"]');
+
+anchors.forEach(el => {
+    el.addEventListener('click', e => {
+        e.preventDefault();
+
+        closeMenuMobile();
+        const blockID = el.getAttribute("href").slice(1);
+        const block = document.getElementById(blockID);
+        const y = block.getBoundingClientRect().top + window.pageYOffset - 50;
+        window.scrollTo({
+            top: y,
+            behavior: "smooth"
+        });
+    })
+})
