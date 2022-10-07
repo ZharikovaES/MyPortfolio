@@ -144,7 +144,7 @@ img{
 
     &::before{
         content: "";
-        background-color: rgba($white, .9);
+        background-color: rgba($white, .95);
         width: 100%;
         height: 0%;
         transform: translate(-50%,-50%) rotate(-45deg);
