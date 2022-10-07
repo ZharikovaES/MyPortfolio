@@ -55,6 +55,7 @@ window.addEventListener('resize', () => {
     }
 });
 
+// theme switch
 
 function setupSwitcher() {
     const savedScheme = getSavedScheme();
@@ -95,7 +96,6 @@ function switchMedia(scheme) {
     let lightMedia = (scheme === 'light') ? 'all' : 'not all';
     let darkMedia = (scheme === 'dark') ? 'all' : 'not all';
 
-    
     [...lightStyles].forEach((link) => {
         link.media = lightMedia;
     });
@@ -132,6 +132,7 @@ anchors.forEach(el => {
         const blockID = el.getAttribute("href").slice(1);
         const block = document.getElementById(blockID);
         const y = block.getBoundingClientRect().top + window.pageYOffset - 50;
+        
         window.scrollTo({
             top: y,
             behavior: "smooth"
