@@ -133,15 +133,11 @@
             justify-content: center;
             column-gap: 2vw;
             row-gap: 2vh;
-        }    
-
+        }
     }
 }
 .quote-skills {
     text-align: right;
-    &__inner{
-
-    }
     &__text {
         font-family: 'Grape Nuts';
         @include adaptiv-font(64, 30, 1);
